@@ -4959,6 +4959,7 @@ PAGE LOAD ANIMATION
 
 .sc-mb-45 {
   margin-bottom: 45px;
+  list-style: none;
 }
 
 .sc-mb-46 {
@@ -31241,6 +31242,7 @@ PAGE LOAD ANIMATION
 
 .mobile-navbar-menu .nav-menu li {
   position: relative;
+
 }
 
 .mobile-navbar-menu .nav-menu li a {
