@@ -30153,10 +30153,10 @@ PAGE LOAD ANIMATION
   background-size: cover;
 }
 .sc-slider-section .slide-image-1 {
-  background: url(../images/slider/slide1_1.jpg);
+  background: url(../images/slider/1.png);
 }
 .sc-slider-section .slide-image-2 {
-  background: url(../images/slider/slide1_2.jpg);
+  background: url(../images/slider/2.png);
 }
 .sc-slider-section .slide-image-3 {
   background: url(../images/slider/slide1_3.jpg);
@@ -34034,7 +34034,7 @@ PAGE LOAD ANIMATION
 }
 
 .sc-breadcrumb-style {
-  background: url(../images/bg/breadcrumb.jpg);
+  background: url(../images/bg/breadcrumb.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
