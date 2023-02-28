@@ -297,6 +297,12 @@
               <div class="submit-button sc-primary-btn">
                 <input type="submit" value="Send Message" />
               </div>
+              <p id="data-sub" style="
+              display: block;
+              background: #e5f4e5;
+              color: black;
+              padding: 8px;
+              border-radius: 8px">Data Submited!</p>
             </div>
           </form>
         </div>
@@ -640,6 +646,8 @@
     <script src="../assets/js/main.js"></script>
     <script src="https://sheetdb.io/handlebars.js"></script>
     <script>
+      var x = document.getElementById("data-sub");
+      x.style.display = "none";
       var form = document.getElementById('sheetdb-form');
       form.addEventListener("submit", e => {
         e.preventDefault();
@@ -649,8 +657,9 @@
         }).then(
             response => response.json()
         ).then((html) => {
+          // you can put any JS code here
           
-          
+          x.style.display = "block";
         });
       });
     </script>
