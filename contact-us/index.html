@@ -236,14 +236,17 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-8">
+          <form method="post" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/d5rj84rr27b4s" class="col-lg-8">
+         
             <div class="contact-box sc-md-mb-10 sc-md-mt-45">
               <h4 class="contact-title sc-pb-15">Get in Touch</h4>
               <div class="form-box">
                 <textarea
                   id="message"
-                  name="message"
+                  name="data[description]"
                   placeholder="Write short subject"
+                  
                 ></textarea>
               </div>
               <div class="row">
@@ -253,7 +256,7 @@
                       class="from-control"
                       type="text"
                       id="name"
-                      name="name"
+                      name="data[name]"
                       placeholder="Full name *"
                       required=""
                     />
@@ -264,7 +267,7 @@
                     class="from-control"
                     type="email"
                     id="address"
-                    name="email"
+                    name="data[email]"
                     placeholder="Your email *"
                     required=""
                   />
@@ -275,7 +278,7 @@
                       class="from-control"
                       type="text"
                       id="phone"
-                      name="phone"
+                      name="data[phoneno]"
                       placeholder="Your phone"
                     />
                   </div>
@@ -285,20 +288,17 @@
                     class="from-control"
                     type="text"
                     id="subject"
-                    name="subject"
+                    name="data[other]"
                     placeholder="Subject"
                   />
                 </div>
               </div>
-              <div class="form-box">
-                <input type="checkbox" /> Save my name, email, and website in
-                this browser for the next time I comment.
-              </div>
+              
               <div class="submit-button sc-primary-btn">
                 <input type="submit" value="Send Message" />
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -638,6 +638,22 @@
     <script src="../assets/js/sal.js"></script>
     <!-- main js -->
     <script src="../assets/js/main.js"></script>
+    <script src="https://sheetdb.io/handlebars.js"></script>
+    <script>
+      var form = document.getElementById('sheetdb-form');
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+          
+          
+        });
+      });
+    </script>
   </body>
 
   <!-- Mirrored from softcoders.net/html/boxfin/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Feb 2023 04:48:26 GMT -->
